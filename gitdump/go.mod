@@ -1,10 +1,7 @@
 module github.com/chengongpp/purge/gitdump
 
-go 1.23.2
+go 1.22.0
 
-require (
-	golang.org/x/exp v0.0.0-20241108190413-2d47ceb2692f
-	golang.org/x/net v0.31.0
-)
+toolchain go1.22.10
 
-require github.com/elliotchance/orderedmap/v2 v2.4.0 // indirect
+require golang.org/x/net v0.31.0
