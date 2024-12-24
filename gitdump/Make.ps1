@@ -1,7 +1,7 @@
 $CC = "go build"
 $CFLAGS = ""
 
-function Build-GitDump {
+function Build {
     & $CC -o gitdump gitdump.go
     if ($LASTEXITCODE -ne 0) {
         Write-Error "Build failed"
@@ -10,7 +10,7 @@ function Build-GitDump {
     Write-Output "Build succeeded"
 }
 
-function Clean-GitDump {
+function CleanBuild {
     Remove-Item -Force -ErrorAction SilentlyContinue gitdump
     Write-Output "Clean succeeded"
 }
@@ -20,7 +20,7 @@ param (
 )
 
 if ($Clean) {
-    Clean-GitDump
+    CleanBuild
 } else {
-    Build-GitDump
+    Build
 }

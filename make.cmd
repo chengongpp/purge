@@ -1,1 +1,0 @@
-powershell -Command "Invoke-Expression $(Get-Content make.ps1 -Raw)"
